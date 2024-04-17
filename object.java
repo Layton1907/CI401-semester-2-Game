@@ -1,14 +1,18 @@
 import java.util.Random;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
-public class object {
+public class object implements MouseListener {
     int blockValue;
     Color color;
     int width;
-    int height; 
+    int height = 50;
     int x = 0;
     int y = 0;
+    boolean holding = false;
+    
 
     object() {
         Random rand = new Random();
@@ -46,5 +50,35 @@ public class object {
 
     public int getHeight() {
         return height;
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        // TODO Auto-generated method stub
+        System.out.println("mouse clicked");
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'mousePressed'");
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'mouseReleased'");
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'mouseEntered'");
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'mouseExited'");
     }
 }
